@@ -6,16 +6,13 @@ const getController = (req,res)=>{
     res.status(200).json({data:properties, totalEdificaciones:properties.length})
 }
 
-const getByIdController = ()=>{
-    const {id} = req.params.id
+const getByIdController = (req,res)=>{
+    const {id} = req.params
     const properties = getConnection().get('propiedades').find({id})
-   if(!properties){
-       return res.status(404).json('Este dato no existe.')
-   }
-   res.status(200).json(properties)
+    res.status(200).json(properties)
 }
 
-const createController = (req,res)=>{
+const postController = (req,res)=>{
     const {edificacion,ancho,largo,habitaciones} = req.body
     const newPropertie = {
         id:shortid.generate(),
@@ -28,10 +25,21 @@ const createController = (req,res)=>{
     res.status(200).json(newPropertie)
 }
 
-
+const putController = async(req,res)=>{
+    const {id} = req.params
+    const properties = await getConnection().get('propiedades').find({id}).assign(req.body).write()
+    res.status(200).json(properties);
+}
+const deleteController = (req,res)=>{
+    const {id} = req.params
+    const properties = getConnection().get('propiedades').remove({id}).write()
+    res.status(200).json({msg:'Edificacion destruida', data:properties})
+}
 module.exports={
     getController,
     getByIdController,
-    createController
+    postController,
+    deleteController,
+    putController
 }
 
