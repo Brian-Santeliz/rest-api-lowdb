@@ -9,11 +9,10 @@ app.set("port", 3000);
 
 //middlewares
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'))
 
 //router
-app.use(router)
+app.use('/properties',router)
 
 //listening
 connection()

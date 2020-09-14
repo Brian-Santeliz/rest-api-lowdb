@@ -1,11 +1,13 @@
 const {Router } =  require('express')
-router = Router()
+const controller = require('../controllers')
+const router = Router()
 
-router.get('/', (req,res)=>{
-    res.status(200).json({
-        "mensaje":"Bienvenido a mi api"
-    })
-})
+router.get('/', controller.getController)
+router.get('/:id')
+
+router.post('/', controller.createController)
+router.put('/:id')
+router.delete('/:id')
 
 module.exports = router
 

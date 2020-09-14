@@ -1,3 +1,10 @@
 {
-  "propiedades": []
+  "propiedades": [
+    {
+      "id": "G-Trgsd7C",
+      "edificacion": "Edificio",
+      "ancho": "120",
+      "largo": "200"
+    }
+  ]
 }
