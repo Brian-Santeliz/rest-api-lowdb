@@ -1,41 +1,12 @@
 {
   "propiedades": [
     {
-      "id": "D-3iLhIuJ",
-      "edificacion": "Carretera",
-      "ancho": "120km",
-      "largo": "20m",
-      "materiales": "otra cosa"
-    },
-    {
-      "id": "ttwQSCDVB",
-      "edificacion": "Carretera",
-      "ancho": "120km",
-      "largo": "20m"
-    },
-    {
-      "id": "4aZHu9d6f",
-      "edificacion": "Carretera",
-      "ancho": "120km",
-      "largo": "20m"
-    },
-    {
-      "id": "1UUE9u6lV",
-      "edificacion": "Carretera",
-      "ancho": "120km",
-      "largo": "20m"
-    },
-    {
-      "id": "1Z9ruNXhKY",
-      "edificacion": "Carretera",
-      "ancho": "120km",
-      "largo": "20m"
-    },
-    {
-      "id": "Ay6DXMeAs",
-      "edificacion": "Carretera",
-      "ancho": "120km",
-      "largo": "20m"
+      "id": "Y84LIJsdv",
+      "edificacion": "Parque",
+      "ancho": "120m",
+      "largo": "180m",
+      "materiales": "Cemento",
+      "atracciones": 7
     }
   ]
 }
